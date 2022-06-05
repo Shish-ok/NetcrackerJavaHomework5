@@ -4,7 +4,8 @@
 
 1) Ссылка на обзор ДЗ:
 2) Код для создания БД:
-3) 
+
+CREATE DATABASE homework5;
 CREATE TABLE employees (
     id serial PRIMARY KEY,
     surname character varying(255) NOT NULL,
