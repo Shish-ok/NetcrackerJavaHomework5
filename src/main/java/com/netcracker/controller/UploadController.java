@@ -47,4 +47,9 @@ public class UploadController {
 
         return "redirect:/upload-employee";
     }
+
+    @GetMapping("/upload-error")
+    public String uploadErr() {
+        return "upload-error";
+    }
 }
