@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload employee</title>
+    <link rel="stylesheet" th:href="@{CSS/uploadStyle.css}" type="text/css">
+    <script th:src="@{js/uploadScript.js}"></script>
+</head>
+<body>
+<header class="head">
+    <a href="#" class="homework-logo">JAVA HOMEWORK</a>
+    <ul class="menu">
+        <li><a href="http://localhost:8080/add-employee" id="add">ADD EMPLOYEE</a></li>
+        <li><a href="#" id="upload">UPLOAD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/search-employee" id="search">SEARCH EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/send-email" id="send">SEND EMAIL</a></li>
+    </ul>
+</header>
+<form class="upload-form" action="#" th:action="@{/upload-employee}" enctype="multipart/form-data" method="post">
+    <input type="file" class="input-file" id="file" name="file">
+    <label for="file"><span>Add file...</span></label>
+    <input type="submit" class="btn" value="UPLOAD">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search employee</title>
+    <link rel="stylesheet" th:href="@{CSS/searchStyle.css}" type="text/css">
+</head>
+<body>
+<header class="head">
+    <a href="#" class="homework-logo">JAVA HOMEWORK</a>
+    <ul class="menu">
+        <li><a href="http://localhost:8080/add-employee" id="add">ADD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/upload-employee" id="upload">UPLOAD EMPLOYEE</a></li>
+        <li><a href="#" id="search">SEARCH EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/send-email" id="send">SEND EMAIL</a></li>
+    </ul>
+</header>
+<form class="search-form" action="#" th:action="@{/search-employee}" th:object="${employee}" method="post">
+    <div class="arr">
+        <div class="in">
+            <input type="text" th:field="*{surname}" class="form_input" placeholder=" ">
+            <label class="form_label">Surname *</label>
+        </div>
+        <div class="in">
+            <input type="text" th:field="*{name}" class="form_input" placeholder=" ">
+            <label class="form_label">Name *</label>
+        </div>
+    </div>
+    <input type="submit" class="btn" value="SEARCH">
+</form>
+</body>
+</html>

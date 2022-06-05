@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send email</title>
+    <link rel="stylesheet" th:href="@{CSS/sendStyle.css}" type="text/css">
+</head>
+<body>
+<header class="head">
+    <a href="#" class="homework-logo">JAVA HOMEWORK</a>
+    <ul class="menu">
+        <li><a href="http://localhost:8080/add-employee" id="add">ADD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/upload-employee" id="upload">UPLOAD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/search-employee" id="search">SEARCH EMPLOYEE</a></li>
+        <li><a href="#" id="send">SEND EMAIL</a></li>
+    </ul>
+</header>
+<form class="send-form" action="#" th:action="@{/send-email}" th:object="${messageDto}" method="post">
+    <div class="arr">
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{surname}" placeholder=" ">
+            <label class="form_label">Surname *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{name}" placeholder=" ">
+            <label class="form_label">Name *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{message}" placeholder=" ">
+            <label class="form_label">Message:</label>
+        </div>
+    </div>
+    <input type="submit" class="btn" value="SEND">
+</form>
+</body>
+</html>

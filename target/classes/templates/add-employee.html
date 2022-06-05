@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add employee</title>
+    <link rel="stylesheet" th:href="@{CSS/addStyle.css}" type="text/css">
+</head>
+<body>
+<header class="head">
+    <a href="#" class="homework-logo">JAVA HOMEWORK</a>
+    <ul class="menu">
+        <li><a href="#" id="add">ADD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/upload-employee" id="upload">UPLOAD EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/search-employee" id="search">SEARCH EMPLOYEE</a></li>
+        <li><a href="http://localhost:8080/send-email" id="send">SEND EMAIL</a></li>
+    </ul>
+</header>
+<form action="#" th:action="@{/add-employee}" th:object="${employeeDto}" class="add-form" method="post">
+    <div class="arr">
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{surname}" placeholder=" ">
+            <label class="form_label">Surname *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{name}" placeholder=" ">
+            <label class="form_label">Name *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{lastname}" placeholder=" ">
+            <label class="form_label">Lastname *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{age}" placeholder=" ">
+            <label class="form_label">Age *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{salary}" placeholder=" ">
+            <label class="form_label">Salary *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{email}" placeholder=" ">
+            <label class="form_label">Email *</label>
+        </div>
+        <div class="in">
+            <input type="text" class="form_input" th:field="*{company}" placeholder=" ">
+            <label class="form_label">Company *</label>
+        </div>
+    </div>
+    <input type="submit" class="btn" value="ADD">
+</form>
+</body>
+</html>

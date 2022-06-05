@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.homework-logo {
+    font-size: 26px;
+    color: #517ba1;
+}
+
+.menu a {
+    color: black;
+    opacity: 0.6;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu a:hover {
+    opacity: 1;
+}
+
+.message {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+h1 {
+    color: #517ba1;
+}
