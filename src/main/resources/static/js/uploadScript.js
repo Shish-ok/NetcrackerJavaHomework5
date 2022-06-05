@@ -1,8 +1,8 @@
 function ready () {
     let input = document.querySelector('.input-file');
-    let lable = input.nextElementSibling;
 
     input.addEventListener('change', function (e) {
+        let lable = input.nextElementSibling;
         label.innerHTML = input.innerHTML;
     });
 }
