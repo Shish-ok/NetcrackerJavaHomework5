@@ -20,7 +20,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendMessage(String recipient, String subject, String content) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom("alexey.shis@yandex.ru");
+            message.setFrom("you-email");
             message.setTo(recipient);
             message.setSubject(subject);
             message.setText(content);
