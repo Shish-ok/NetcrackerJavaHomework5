@@ -52,4 +52,9 @@ public class SearchController {
     public String errSearch() {
         return "search-error";
     }
+
+    @GetMapping("/search-notfound")
+    public String notFound() {
+        return "search-notfound";
+    }
 }
